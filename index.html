@@ -84,13 +84,10 @@
     });
 
     function login() {
-    const usuario = document.getElementById('email').value; // Ahora es el nombre
-    const p = document.getElementById('password').value;
-
-    // Le pegamos un dominio falso para engañar a Firebase
-    const correoFalso = usuario + "@sistema.local"; 
-
-    auth.signInWithEmailAndPassword(correoFalso, p).catch(err => alert("Usuario o clave incorrecta"));
+        const usuario = document.getElementById('email').value;
+        const p = document.getElementById('password').value;
+        const correoFalso = usuario + "@sistema.local";
+        auth.signInWithEmailAndPassword(correoFalso, p).catch(err => alert("Usuario o clave incorrecta"));
     }
 
     function register() {
